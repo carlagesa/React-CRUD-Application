@@ -21,6 +21,8 @@ import Switch from '@mui/material/Switch';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
+import Button from '@mui/material/Button';
+
 
 function createData(name, calories, fat, carbs, protein) {
   return {
@@ -207,11 +209,10 @@ const EnhancedTableToolbar = (props) => {
       )}
 
       {numSelected > 0 ? (
-        <Tooltip title="Delete">
-          <IconButton>
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>
+        <Button variant="outlined" startIcon={<DeleteIcon />}>
+        Delete
+      </Button>
+     
       ) : (
         <Tooltip title="Filter list">
           <IconButton>

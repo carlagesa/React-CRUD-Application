@@ -4,7 +4,9 @@ import Button from '@mui/material/Button';
 // import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Stack from '@mui/material/Stack';
-import './App.css';
+import DeleteIcon from '@mui/icons-material/Delete';
+import AddIcon from '@mui/icons-material/Add';
+import EditIcon from '@mui/icons-material/Edit';import './App.css';
 
 
 const style = {
@@ -26,7 +28,13 @@ export default function BasicModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Add User</Button>
+        <Stack direction="row" spacing={2}>
+        <Button startIcon={<AddIcon />} onClick={handleOpen}>Add</Button>
+        <Button startIcon={<EditIcon />} >Edit</Button>
+        <Button startIcon={<DeleteIcon />}>Delete</Button>
+
+        </Stack>
+      
       <Modal
         open={open}
         onClose={handleClose}
