@@ -22,6 +22,8 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Style } from '@mui/icons-material';
 import { ClassNames } from '@emotion/react';
+import BasicModal from './AddUser'
+
 
 const drawerWidth = 240;
 
@@ -189,6 +191,8 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
+        <BasicModal />
+
         <EnhancedTable />
         {/* <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

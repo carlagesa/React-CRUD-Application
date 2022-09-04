@@ -111,6 +111,8 @@ const headCells = [
   },
 ];
 
+
+
 function EnhancedTableHead(props) {
   const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
     props;
@@ -119,6 +121,8 @@ function EnhancedTableHead(props) {
   };
 
   return (
+
+
     <TableHead>
       <TableRow>
         <TableCell padding="checkbox">
@@ -155,6 +159,7 @@ function EnhancedTableHead(props) {
         ))}
       </TableRow>
     </TableHead>
+
   );
 }
 
@@ -166,11 +171,11 @@ EnhancedTableHead.propTypes = {
   orderBy: PropTypes.string.isRequired,
   rowCount: PropTypes.number.isRequired,
 };
-
 const EnhancedTableToolbar = (props) => {
   const { numSelected } = props;
 
   return (
+
     <Toolbar
       sx={{
         pl: { sm: 2 },
@@ -354,6 +359,7 @@ export default function EnhancedTable() {
                   <TableCell colSpan={6} />
                 </TableRow>
               )}
+
             </TableBody>
           </Table>
         </TableContainer>
@@ -367,10 +373,13 @@ export default function EnhancedTable() {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
+
       <FormControlLabel
         control={<Switch checked={dense} onChange={handleChangeDense} />}
         label="Dense padding"
       />
+
     </Box>
   );
+
 }
