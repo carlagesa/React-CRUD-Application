@@ -1,6 +1,6 @@
 import * as React from 'react';
 import EnhancedTable from './EnhancedTable';
-import LetterAvatars from './UserProfile'
+// import LetterAvatars from './UserProfile'
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -105,7 +105,7 @@ export default function MiniDrawer() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }}>   
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -123,11 +123,8 @@ export default function MiniDrawer() {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             Mini variant drawer
-          
           </Typography>
-          
         </Toolbar>
-        
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>

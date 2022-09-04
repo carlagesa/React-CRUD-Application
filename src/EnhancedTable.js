@@ -209,10 +209,10 @@ const EnhancedTableToolbar = (props) => {
       )}
 
       {numSelected > 0 ? (
+        // <Button onClick={handleOpen}>Add User</Button>
         <Button variant="outlined" startIcon={<DeleteIcon />}>
         Delete
       </Button>
-     
       ) : (
         <Tooltip title="Filter list">
           <IconButton>

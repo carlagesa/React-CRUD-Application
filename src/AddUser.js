@@ -7,6 +7,11 @@ import Stack from '@mui/material/Stack';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';import './App.css';
+import SearchIcon from '@mui/icons-material/Search';
+import './App.css';
+
+
+
 
 
 const style = {
@@ -28,14 +33,19 @@ export default function BasicModal() {
 
   return (
     <div>
-        <Stack direction="row" spacing={2}>
-        <Button startIcon={<AddIcon />} onClick={handleOpen}>Add</Button>
-        <Button startIcon={<EditIcon />} >Edit</Button>
-        <Button startIcon={<DeleteIcon />}>Delete</Button>
-
+        
+        <Stack direction="row" justifyContent="flex-end" spacing={2}>
+            {/* Will add search icon later */}
+        <input placeholder='Search...' className='search'></input>
+        <Button variant="outlined" startIcon={<AddIcon />} onClick={handleOpen}>Add</Button>
+        <Button variant="outlined" startIcon={<EditIcon />} >Edit</Button>
+        <Button variant="outlined" startIcon={<DeleteIcon />}>Delete</Button>
+        
         </Stack>
+
+        
       
-      <Modal
+      <Modal 
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
