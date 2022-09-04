@@ -1,10 +1,13 @@
 import './App.css';
-import EnhancedTable from './EnhancedTable';
-
+// import EnhancedTable from './EnhancedTable';
+import MiniDrawer from './Drawer'
 
 function App() {
   return (
-    <EnhancedTable/>
+    <div>
+      {/* <EnhancedTable /> */}
+      <MiniDrawer />
+    </div>
 
   );
 }
