@@ -24,9 +24,9 @@ import { visuallyHidden } from '@mui/utils';
 import Button from '@mui/material/Button';
 
 
-function createData(name, calories, fat, carbs, protein) {
+function createData(first, calories, fat, carbs, protein) {
   return {
-    name,
+    first,
     calories,
     fat,
     carbs,
@@ -204,7 +204,7 @@ const EnhancedTableToolbar = (props) => {
           id="tableTitle"
           component="div"
         >
-          Nutrition
+          Data
         </Typography>
       )}
 
@@ -342,7 +342,7 @@ export default function EnhancedTable() {
                         scope="row"
                         padding="none"
                       >
-                        {row.name}
+                        {row.first}
                       </TableCell>
                       <TableCell align="right">{row.calories}</TableCell>
                       <TableCell align="right">{row.fat}</TableCell>
