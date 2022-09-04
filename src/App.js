@@ -2,6 +2,7 @@ import './App.css';
 // import EnhancedTable from './EnhancedTable';
 import MiniDrawer from './Drawer'
 import BasicModal from './AddUser'
+import Footer from './Footer'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       {/* <EnhancedTable /> */}
       <BasicModal />
       <MiniDrawer />
+      <Footer />
 
     </div>
 
