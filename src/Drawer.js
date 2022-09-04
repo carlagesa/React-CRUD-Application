@@ -1,6 +1,6 @@
 import * as React from 'react';
 import EnhancedTable from './EnhancedTable';
-
+import LetterAvatars from './UserProfile'
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -20,6 +20,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { Style } from '@mui/icons-material';
+import { ClassNames } from '@emotion/react';
 
 const drawerWidth = 240;
 
@@ -119,8 +121,11 @@ export default function MiniDrawer() {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             Mini variant drawer
+          
           </Typography>
+          
         </Toolbar>
+        
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
@@ -129,7 +134,9 @@ export default function MiniDrawer() {
           </IconButton>
         </DrawerHeader>
         <Divider />
+        
         <List>
+               
           {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
@@ -157,6 +164,7 @@ export default function MiniDrawer() {
         <List>
           {['All mail', 'Trash', 'Spam'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+                
               <ListItemButton
                 sx={{
                   minHeight: 48,
